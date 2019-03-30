@@ -149,3 +149,5 @@ It's about performance, the original one is you press a key -> interrupt service
 ## Reference
 + https://github.com/fatsheep9146/6.828mit/tree/master/lab
 + https://github.com/allenwhale/2017-NCTU-OSDI/tree/master/lab3
++ [中斷描述表 - 概論](https://www.csie.ntu.edu.tw/~wcchen/asm98/asm/proj/b85506061/chap4/idt.html)
++ [Intel 64 and IA-32 Architectures Sofeware Developer's Manual](https://software.intel.com/sites/default/files/managed/a4/60/325384-sdm-vol-3abcd.pdf)
