@@ -36,10 +36,10 @@ qemu-system-i386 -hda kernel.img
 `SEG(type,base,lim)`
 1. Explain what are the parameters `type` `base` `lim` for, and how did you decide the value of them.
 
-SEG() is a macro to build GDT entries in assembly.
-`base`: the physical address of the segment's starting location.
-`lim`: length_of_segment - 1, also depends on G(Granularity) bit. 
-`type`: the type of segment and how it can be accessed.
+SEG() is a macro to build GDT entries in assembly.</br>
+`base`: the physical address of the segment's starting location.</br>
+`lim`: length_of_segment - 1, also depends on G(Granularity) bit.</br>
+`type`: the type of segment and how it can be accessed.</br>
 More details on [here](https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-2.html).
 
 ```
@@ -51,7 +51,7 @@ More details on [here](https://0xax.gitbooks.io/linux-insides/content/Booting/li
 
  2. How did you setup gdtdesc, what's the minimum value of `gdt limit` which still boot properly?
  
-`gdtr` has 16-bit table limit and 32-bit linear base address, so I setup gdtdesc like below.
+`gdtr` has 16-bit table limit and 32-bit linear base address, so I setup gdtdesc like below.</br>
 The minimum value of `gdb limit` is `(end_gdt - gdt) - 1`.
  
  ```clike
@@ -77,8 +77,8 @@ set PE bit in CR0 register to true, switching from real mode to protected mode.
 ### IDT setup
 
 `SETGATE(gate, istrap, sel, off, dpl)`
-1. What are the 1st and 4th parameters of `SETGATE` for?
-`gate`: the interrupt gate descriptor.
+1. What are the 1st and 4th parameters of `SETGATE` for?</br>
+`gate`: the interrupt gate descriptor.</br>
 `off`: interrupt handler.
 
 ```=
@@ -110,7 +110,7 @@ set PE bit in CR0 register to true, switching from real mode to protected mode.
 }
 ```
 
-2. After `lidt`, is data structure `Pseudodesc` still used for other purpose, or we can just discard it？Why?
+2. After `lidt`, is data structure `Pseudodesc` still used for other purpose, or we can just discard it？Why</br>
 After `lidt`, `idtr` has the address of idt, so we don't need `Pseudodesc` anymore.
 
 
