@@ -110,7 +110,7 @@ set PE bit in CR0 register to true, switching from real mode to protected mode.
 }
 ```
 
-2. After `lidt`, is data structure `Pseudodesc` still used for other purpose, or we can just discard it？Why</br>
+2. After `lidt`, is data structure `Pseudodesc` still used for other purpose, or we can just discard it? Why?</br>
 After `lidt`, `idtr` has the address of idt, so we don't need `Pseudodesc` anymore.
 
 
