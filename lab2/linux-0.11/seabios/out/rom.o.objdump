@@ -1,0 +1,817 @@
+
+out/rom.o:     file format elf32-i386
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00026d60  000d92a0  000d92a0  00000060  2**4
+                  CONTENTS, ALLOC, LOAD, CODE
+  1 .comment      0000002c  00000000  00000000  00026dc0  2**0
+                  CONTENTS, READONLY
+  2 .debug_aranges 00000c60  00000000  00000000  00026dec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 000005d7  00000000  00000000  00027a4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   0002e2d7  00000000  00000000  00028023  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000008ce  00000000  00000000  000562fa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00008545  00000000  00000000  00056bc8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  000065e8  00000000  00000000  0005f110  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    00009edd  00000000  00000000  000656f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    000247fe  00000000  00000000  0006f5d5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_pubtypes 00001771  00000000  00000000  00093dd3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00002260  00000000  00000000  00095544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+000d92a0 l    d  .text	00000000 .text
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_pubnames	00000000 .debug_pubnames
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_pubtypes	00000000 .debug_pubtypes
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 ccode32flat.o.tmp.c
+000ed7c0 l     F .text	00000011 set_equipment_flags
+000ed7d1 l     F .text	0000000d runningOnXen
+000d9b30 l     F .text	0000000f hlist_del
+000ed7de l     F .text	00000018 threads_during_optionroms
+000f6495 l     O .text	00000001 ThreadControl
+000ed7f6 l     F .text	0000001d switch_next
+000ed813 l     F .text	0000000b debug_putc
+000ed81e l     F .text	00000022 puts
+000ed840 l     F .text	00000036 putuint
+000ed876 l     F .text	00000017 putsinglehex
+000ed88d l     F .text	00000083 puthex
+000ed910 l     F .text	00000048 putprettyhex
+000ed958 l     F .text	00000253 bvprintf
+000d9b3f l     F .text	0000000e putc_str
+000edbab l     F .text	00000013 checksum
+000edbbe l     F .text	0000000f strlen
+000d9b4d l     F .text	00000030 memcmp
+000edbcd l     F .text	00000020 strcmp
+000d9b7d l     F .text	00000029 strtcpy
+000d9ba6 l     F .text	0000002c nullTrailingSpace
+000edbed l     F .text	00000068 irqtimer_calc
+000edc55 l     F .text	00000023 irqtimer_check
+000edc78 l     F .text	00000023 pci_config_writel
+000edc9b l     F .text	0000002d pci_config_writew
+000edcc8 l     F .text	0000002c pci_config_writeb
+000edcf4 l     F .text	0000001d pci_config_readl
+000edd11 l     F .text	00000029 pci_config_readw
+000edd3a l     F .text	00000028 pci_config_readb
+000edd62 l     F .text	0000004c pci_next
+000eddae l     F .text	00000023 timer_adjust_bits
+000eddd1 l     F .text	00000051 timer_read
+000ede22 l     F .text	00000014 timer_check
+000ede36 l     F .text	0000001c timer_delay
+000ede52 l     F .text	0000001a udelay
+000ede6c l     F .text	00000013 timer_calc
+000ede7f l     F .text	00000025 timer_calc_usec
+000edea4 l     F .text	00000025 pic_setup
+000d9bd2 l     F .text	00000040 enable_hwirq
+000d9c12 l     F .text	0000000d usb_add_freelist
+000d9c1f l     F .text	00000019 usb_get_freelist
+000d9c38 l     F .text	00000040 usb_find_desc
+000d9c78 l     F .text	00000041 uhci_hub_reset
+000d9cb9 l     F .text	0000000f uhci_hub_disconnect
+000d9cc8 l     F .text	00000010 ohci_hub_detect
+000d9cd8 l     F .text	00000011 ohci_hub_disconnect
+000d9ce9 l     F .text	00000017 ehci_hub_disconnect
+000d9d00 l     F .text	000000e0 ehci_desc2pipe
+000edec9 l     F .text	00000011 __swab64
+000ededa l     F .text	00000021 scsi_is_read
+000d9de0 l     F .text	0000001c ata_extract_version
+000d9dfc l     F .text	00000001 found_compatibleahci
+000edefb l     F .text	0000001c code_mutable_preinit
+000d9dfd l     F .text	00000053 alloc_new
+000d9e50 l     F .text	00000019 alloc_free
+000d9e69 l     F .text	0000001f alloc_find
+000ed6fc l     O .text	00000014 Zones
+000d9e88 l     F .text	00000030 malloc_pfree
+000d9eb8 l     F .text	0000003c malloc_getspace
+000ed528 l     O .text	00000004 ZoneTmpHigh
+000ed524 l     O .text	00000004 ZoneTmpLow
+000edf17 l     F .text	00000011 rom_get_max
+000f648c l     O .text	00000004 RomBase
+000d9ef4 l     F .text	0000003f rom_reserve
+000ed6f8 l     O .text	00000004 RomEnd
+000d9f33 l     F .text	00000050 calcRamSize
+000d9f83 l     F .text	00000031 __romfile_findprefix
+000ed6f4 l     O .text	00000004 RomfileRoot
+000d9fb4 l     F .text	00000018 romfile_findprefix
+000d9fcc l     F .text	00000015 romfile_find
+000d9fe1 l     F .text	0000005d romfile_loadint
+000edf28 l     F .text	00000059 cpuid
+000da03e l     F .text	0000004b is_pci_vga
+000da089 l     F .text	00000053 add_bev
+000ed79c l     O .text	00000004 HaveHDBoot
+000ed7a0 l     O .text	00000004 HaveFDBoot
+000f63dc l     O .text	00000004 BEVCount
+000f63e0 l     O .text	000000a0 BEV
+000da0dc l     F .text	0000007b fillbits
+000da157 l     F .text	000000fc dec_rec2
+000da253 l     F .text	0000031a idct
+000ed69c l     O .text	00000040 zig2
+000da56d l     F .text	0000005b idctqtab
+000ed144 l     O .text	00000020 aaidct
+000ed104 l     O .text	00000040 zig
+000da5c8 l     F .text	00000017 scaleidctqtab
+000da5df l     F .text	00000034 tpm_can_show_menu
+000f63d1 l     O .text	00000001 TPM_version
+000ed790 l     O .text	00000004 TPM_has_physical_presence
+000da613 l     F .text	00000029 pci_find_device
+000ed52c l     O .text	00000004 PCIDevices
+000da63c l     F .text	0000001d pci_find_class
+000da659 l     F .text	00000059 pci_init_device
+000da6b2 l     F .text	0000000f xhci_hub_detect
+000da6c1 l     F .text	00000001 xhci_hub_disconnect
+000da6c2 l     F .text	0000005c get_acpi_rsdp_length
+000edf81 l     F .text	00000059 find_fadt
+000f61e4 l     O .text	00000004 RsdpAddr
+000da71e l     F .text	0000005d smbios_next
+000edfda l     F .text	0000009c make_bios_readonly_intel
+000da77b l     F .text	00000056 pci_set_io_region_addr
+000da7d1 l     F .text	00000034 piix_pci_slot_get_irq
+000eb7fc l     O .text	00000004 pci_irqs
+000da805 l     F .text	0000003d mch_pci_slot_get_irq
+000ee076 l     F .text	0000003d mch_isa_lpc_setup
+000f60f8 l     O .text	00000002 acpi_pm_base
+000da842 l     F .text	0000005a storage_ide_setup
+000da89c l     F .text	00000027 piix_ide_setup
+000da8c3 l     F .text	00000014 pic_ibm_setup
+000da8d7 l     F .text	00000014 apple_macio_setup
+000ee0b3 l     F .text	00000067 piix4_pm_config_setup
+000ee11a l     F .text	0000002f ich9_smbus_enable
+000da8eb l     F .text	0000000d ich9_smbus_setup
+000f613c l     O .text	00000004 ICH9SmbusBDF
+000da8f8 l     F .text	0000003e i440fx_mem_addr_setup
+000ed750 l     O .text	00000004 RamSize
+000ed4f8 l     O .text	00000008 pcimem_start
+000ed680 l     O .text	00000004 pci_slot_get_irq
+000ee149 l     F .text	0000002f mch_mmconfig_setup
+000ee178 l     F .text	0000002b smp_write_msrs
+000f639c l     O .text	00000004 smp_msr_count
+000f621c l     O .text	00000180 smp_msr
+000da936 l     F .text	00000017 apic_id_is_present
+000f63a4 l     O .text	00000020 FoundAPICIDs
+000ee1a3 l     F .text	00000073 apic_id_init
+000f61e8 l     O .text	00000004 MaxCountCPUs
+000da94d l     F .text	0000005e piix4_fadt_setup
+000da9ab l     F .text	0000005d ich9_lpc_fadt_setup
+000daa08 l     F .text	00000010 getHex
+000daa18 l     F .text	0000003e encodeLen
+000daa56 l     F .text	0000003a smbios_init_type_19
+000daa90 l     F .text	00000056 smbios_init_type_20
+000daae6 l     F .text	00000036 romfile_loader_find
+000ee216 l     F .text	000001ab _vp_read
+000ee3c1 l     F .text	00000130 _vp_write
+000dab1c l     F .text	00000078 vp_get_features
+000dab94 l     F .text	00000084 vp_set_features
+000dac18 l     F .text	00000029 vp_get_status
+000dac41 l     F .text	0000003f vp_set_status
+000ee4f1 l     F .text	00000029 vp_get_isr
+000dac80 l     F .text	00000056 vp_reset
+000ee51a l     F .text	000000cc vp_notify
+000ee5e6 l     F .text	00000042 tis_probe
+000ee628 l     F .text	00000059 tis_init
+000f60fc l     O .text	00000030 tpm_drivers
+000f61fc l     O .text	0000000c tpm_default_dur
+000f5e6c l     O .text	0000000c tpm_default_durations
+000f6208 l     O .text	00000010 tpm_default_to
+000f5e78 l     O .text	00000010 tis_default_timeouts
+000ee681 l     F .text	0000004d set_timeouts
+000dacd6 l     F .text	000000a4 build_notify
+000ee6ce l     F .text	00000054 smm_save_and_copy
+000ee722 l     F .text	00000064 smm_relocate_and_restore
+000ee786 l     F .text	00000107 smm_setup
+000f6130 l     O .text	00000004 SMMISADeviceBDF
+000f6134 l     O .text	00000004 SMMPMDeviceBDF
+000ee88d l     F .text	00000087 __make_bios_writable_intel
+000ee914 l     F .text	00000028 make_bios_writable_intel
+000ee93c l     F .text	000000b1 xhci_xfer_queue
+000ee9ed l     F .text	0000002a xhci_xfer_normal
+000eea17 l     F .text	0000006c tpm_log_event
+000dad7a l     F .text	0000002e memmove
+000dada8 l     F .text	0000002b remove_e820
+000eea83 l     F .text	00000003 be32_to_cpu
+000eea86 l     F .text	0000007e tpmhw_transmit
+000f612c l     O .text	00000001 TPMHW_driver_to_use
+000eeb04 l     F .text	00000171 sha1_block
+000f5f84 l     O .text	00000010 sha_ko.11011
+000dadd3 l     F .text	000000ee tpm20_write_EfiSpecIdEventStruct
+000f63d4 l     O .text	00000004 tpm20_pcr_selection
+000f63d8 l     O .text	00000004 tpm20_pcr_selection_size
+000f60bc l     O .text	0000003c CSWTCH.1660
+000eec75 l     F .text	00000003 cpu_to_be32
+000eec78 l     F .text	000000f3 sha1_do
+000eed6b l     F .text	00000035 sha1
+000f5f70 l     O .text	00000014 C.609.23352
+000eeda0 l     F .text	0000012a tpm_build_digest
+000eeeca l     F .text	0000018b tpm_extend
+000ef055 l     F .text	00000069 scsi_fill_cmd
+000daec1 l     F .text	0000004c snprintf
+000daf0d l     F .text	0000004b get_field
+000daf58 l     F .text	0000023e smbios_init_type_4
+000db196 l     F .text	00000159 smbios_init_type_17
+000ef0be l     F .text	00000013 printf
+000f6154 l     O .text	00000004 screeninfo
+000ef0d1 l     F .text	00000013 __dprintf
+000f6150 l     O .text	00000004 debuginfo
+000db2ef l     F .text	000001f9 pci_bios_init_bus_rec
+000eccac l     O .text	00000016 __func__.13653
+000db4e8 l     F .text	00000011 dummy_pci_slot_get_irq
+000db4f9 l     F .text	00000077 piix_isa_bridge_setup
+000ef0e4 l     F .text	0000004a make_bios_readonly
+000f6148 l     O .text	00000004 ShadowBDF
+000ef12e l     F .text	0000007d make_bios_writable
+000ef1ab l     F .text	0000005b xhci_print_port_state
+000f5f00 l     O .text	00000040 speed_name
+000ef206 l     F .text	00000113 xhci_process_events
+000f5eec l     O .text	00000014 __func__.11754
+000db570 l     F .text	00000085 find_prio
+000ed798 l     O .text	00000004 BootorderCount
+000ed6e0 l     O .text	00000004 Bootorder
+000db5f5 l     F .text	00000051 bootprio_find_named_rom
+000ef319 l     F .text	00000050 is_valid_rom
+000f6488 l     O .text	00000004 EnforceChecksum
+000db646 l     F .text	00000023 pmtimer_setup
+000db669 l     F .text	0000002a piix4_pm_setup
+000f6140 l     O .text	00000004 PiixPmBDF
+000ef369 l     F .text	00000048 sdcard_reset
+000f5ecc l     O .text	0000000d __func__.12072
+000db693 l     F .text	00000038 i8042_flush
+000ed474 l     O .text	0000000c __func__.5227
+000ef3b1 l     F .text	00000036 i8042_wait_write
+000f6064 l     O .text	00000011 __func__.5217
+000db6cb l     F .text	0000009d i8042_command
+000ed480 l     O .text	00000010 __func__.5208
+000db768 l     F .text	00000185 get_external
+000ed770 l     O .text	00000020 used_bitmap.14418
+000eb8e0 l     O .text	0000000d __func__.14423
+000db8ed l     F .text	0000004c wrmsr_smp
+000ecc94 l     O .text	0000000a __func__.13992
+000db939 l     F .text	0000004f deploy_romfile
+000ed198 l     O .text	0000000f __func__.8729
+000db988 l     F .text	0000008f alloc_new_detail
+000ed1d8 l     O .text	00000011 __func__.8354
+000dba17 l     F .text	0000005f alloc_add
+000dba76 l     F .text	00000042 malloc_palloc
+000dbab8 l     F .text	00000011 malloc_high
+000ed51c l     O .text	00000004 ZoneHigh
+000dbac9 l     F .text	00000011 malloc_fseg
+000ed520 l     O .text	00000004 ZoneFSeg
+000dbada l     F .text	0000000c memalign_high
+000dbae6 l     F .text	00000011 malloc_tmphigh
+000dbaf7 l     F .text	00000011 malloc_tmplow
+000dbb08 l     F .text	00000016 malloc_tmp
+000dbb1e l     F .text	0000000c memalign_tmphigh
+000dbb2a l     F .text	0000008d run_thread
+000dd072 l     F .text	0000002b __end_thread
+000dbbb7 l     F .text	00000022 memalign_tmp
+000dbbd9 l     F .text	00000011 malloc_low
+000ed518 l     O .text	00000004 ZoneLow
+000dbbea l     F .text	00000096 copy_smbios
+000ed760 l     O .text	00000004 SMBiosAddr
+000eceb8 l     O .text	0000000c __func__.13136
+000dbc80 l     F .text	0000005b copy_acpi_rsdp
+000ecec4 l     O .text	0000000f __func__.13064
+000dbcdb l     F .text	000000cc copy_mptable
+000eced4 l     O .text	0000000d __func__.13051
+000dbda7 l     F .text	0000006f copy_pir
+000ecee4 l     O .text	00000009 __func__.13043
+000dbe16 l     F .text	0000012f pvscsi_init_rings
+000ed008 l     O .text	00000012 __func__.11447
+000dbf45 l     F .text	00000104 pci_region_create_entry
+000ecd0c l     O .text	00000018 __func__.13759
+000dc049 l     F .text	00000082 qemu_romfile_add
+000ece4c l     O .text	00000011 __func__.13292
+000dd10d l     F .text	00000056 qemu_cfg_read_file
+000dc0cb l     F .text	000001bd pci_probe_devices
+000ed0b0 l     O .text	00000012 __func__.11057
+000dc288 l     F .text	000000ab bootentry_add
+000ed178 l     O .text	0000000e __func__.9009
+000ed6dc l     O .text	00000004 BootList
+000dc333 l     F .text	00000021 boot_add_cd
+000ed6e4 l     O .text	00000004 DefaultCDPrio
+000dc354 l     F .text	00000021 boot_add_hd
+000ed6e8 l     O .text	00000004 DefaultHDPrio
+000dc375 l     F .text	00000041 boot_add_bcv
+000dc3b6 l     F .text	000000e6 xhci_alloc_inctx
+000ecf70 l     O .text	00000011 __func__.11834
+000ecf60 l     O .text	00000010 speed_to_xhci
+000dc49c l     F .text	0000009d insert_e820
+000ed200 l     O .text	0000000c __func__.8232
+000dc539 l     F .text	0000023c e820_add
+000dc775 l     F .text	0000006e mch_mem_addr_setup
+000f6138 l     O .text	00000004 MCHMmcfgBDF
+000ed510 l     O .text	00000008 pci_io_low_end
+000dc7e3 l     F .text	000000bf mch_isa_bridge_setup
+000f6144 l     O .text	00000004 ICH9LpcBDF
+000dc8a2 l     F .text	0000006c init_atadrive
+000ed2ec l     O .text	0000000e __func__.7417
+000dc90e l     F .text	00000095 init_floppy
+000ed2fc l     O .text	0000000c __func__.7017
+000dc9a3 l     F .text	0000003c create_bounce_buf
+000ed4c4 l     O .text	00000012 __func__.3156
+000ef3e7 l     F .text	000000d1 tpm_build_and_send_cmd
+000f5f94 l     O .text	00000017 __func__.10563
+000dc9df l     F .text	00000025 free
+000ed1f8 l     O .text	00000005 __func__.8457
+000dca04 l     F .text	00000200 pci_region_map_entries
+000ecd00 l     O .text	0000000c region_type_name
+000dcc04 l     F .text	000002c1 vp_find_vq
+000eb838 l     O .text	0000000b __func__.14953
+000dcec5 l     F .text	00000132 intel_igd_setup
+000ece3c l     O .text	00000010 __func__.13575
+000dcff7 l     F .text	0000007b romfile_loadfile
+000ed1c4 l     O .text	00000011 __func__.8649
+000ef4b8 l     F .text	00000022 debug_banner
+000dd09d l     F .text	00000070 znprintf
+000ed4d8 l     O .text	00000009 __func__.2711
+000ef4da l     F .text	00000016 panic
+000ef4f0 l     F .text	00000097 call16
+000ef587 l     F .text	0000003a yield
+000f6494 l     O .text	00000001 CanInterrupt
+000ef5c1 l     F .text	0000006a tis_wait_sts
+000f5e4c l     O .text	0000000d __func__.15176
+000ef62b l     F .text	0000006d tis_activate
+000ef698 l     F .text	00000026 tis_find_active_locality
+000ef6be l     F .text	00000042 tis_readresp
+000ef700 l     F .text	00000037 tis_waitrespready
+000ef737 l     F .text	0000002a tis_waitdatavalid
+000ef761 l     F .text	0000002b tis_ready
+000ef78c l     F .text	000000a4 tis_senddata
+000f5e5c l     O .text	0000000d __func__.15212
+000ef830 l     F .text	00000054 qemu_cfg_dma_transfer
+000ef884 l     F .text	0000002d qemu_cfg_skip
+000f61dc l     O .text	00000004 cfg_dma_enabled
+000ef8b1 l     F .text	00000026 qemu_cfg_read
+000ef8d7 l     F .text	00000036 qemu_cfg_read_entry
+000ef90d l     F .text	0000003c qemu_get_present_cpus_count
+000ef949 l     F .text	00000074 qemu_cfg_write_file_simple
+000f5ea4 l     O .text	00000015 __func__.13259
+000f5ebc l     O .text	0000000f __func__.13240
+000ef9bd l     F .text	0000011b smp_scan
+000f63a0 l     O .text	00000004 CountCPUs
+000efad8 l     F .text	00000067 sdcard_waitw
+000f5edc l     O .text	0000000d __func__.12065
+000efb3f l     F .text	0000007b sdcard_pio
+000dd163 l     F .text	00000094 sdcard_set_frequency
+000efbba l     F .text	0000011f sdcard_pio_transfer
+000efcd9 l     F .text	00000052 sdcard_readwrite
+000efd2b l     F .text	00000060 xhci_event_wait
+000f5f50 l     O .text	00000010 __func__.11776
+000dd1f7 l     F .text	000000cf xhci_hub_reset
+000ecfec l     O .text	0000000f __func__.11665
+000ecfac l     O .text	00000040 speed_from_xhci
+000dd2c6 l     F .text	00000052 wait_bit
+000ecffc l     O .text	00000009 __func__.11634
+000efd8b l     F .text	000001b5 ahci_command
+000f5f60 l     O .text	0000000d __func__.11207
+000eff40 l     F .text	0000010d ahci_disk_readwrite_aligned
+000f004d l     F .text	000000c1 ahci_disk_readwrite
+000f010e l     F .text	000000a7 megasas_fire_cmd
+000f5fc8 l     O .text	00000011 __func__.7769
+000dd318 l     F .text	00000053 powerup_await_non_bsy
+000ed7a8 l     O .text	00000004 SpinupEnd
+000ed2c8 l     O .text	00000016 __func__.7447
+000dd36b l     F .text	00000011 ehci_wait_controllers
+000ed7b0 l     O .text	00000004 PendingEHCI
+000dd37c l     F .text	0000008f ohci_hub_reset
+000ed3c8 l     O .text	0000000f __func__.6154
+000f01b5 l     F .text	0000004f uhci_waittick
+000f6054 l     O .text	0000000e __func__.5958
+000dd40b l     F .text	00000078 usb_enumerate
+000ed768 l     O .text	00000004 usb_time_sigatt
+000ed42c l     O .text	0000000e __func__.5899
+000e8d46 l     F .text	0000092b usb_hub_port_setup
+000dd483 l     F .text	000001a6 configure_uhci
+000ed41c l     O .text	0000000f __func__.5989
+000ed740 l     O .text	0000000c uhci_HubOp
+000f0204 l     F .text	0000001f timer_sleep
+000dd629 l     F .text	0000000c msleep
+000dd635 l     F .text	00000303 configure_xhci
+000ecf9c l     O .text	0000000f __func__.11688
+000ed690 l     O .text	0000000c xhci_hub_ops
+000dd938 l     F .text	00000041 ehci_hub_reset
+000dd979 l     F .text	0000004b ehci_hub_detect
+000dd9c4 l     F .text	0000002c uhci_hub_detect
+000f0223 l     F .text	0000001a usleep
+000dd9f0 l     F .text	00000046 iomemcpy
+000dda36 l     F .text	0000002a wait_preempt
+000dda60 l     F .text	000000cd xhci_cmd_submit
+000ddb2d l     F .text	00000014 wait_threads
+000f023d l     F .text	00000028 yield_toirq
+000f0265 l     F .text	0000000a _farcall16
+000f026f l     F .text	0000001b __call16_int
+000ddb41 l     F .text	0000008b get_keystroke
+000f028a l     F .text	0000003e screenc
+000f02c8 l     F .text	0000002e screen_putc
+000f61ec l     O .text	00000004 ScreenAndDebug
+000f02f6 l     F .text	00000038 call16_override
+000f032e l     F .text	00000017 farcall16big
+000f0345 l     F .text	00000063 call_boot_entry
+000f03a8 l     F .text	00000013 reset
+000f03bb l     F .text	00000065 boot_fail
+000f6480 l     O .text	00000004 BootRetryTime
+000ddbcc l     F .text	00000024 getFBSize.clone.12
+000ed4a0 l     O .text	00000008 mem_power.4691
+000ddbf0 l     F .text	0000001c usb_get_period.clone.18
+000ddc0c l     F .text	00000efc usb_realloc_pipe
+000ed3ec l     O .text	00000015 __func__.6029
+000ed3d8 l     O .text	00000012 __func__.6055
+000ed380 l     O .text	00000012 __func__.6280
+000ed340 l     O .text	00000015 __func__.6480
+000ed32c l     O .text	00000012 __func__.6507
+000ecf40 l     O .text	00000010 __func__.11869
+000ecf50 l     O .text	00000010 __func__.11858
+000ecf2c l     O .text	00000012 __func__.11895
+000deb08 l     F .text	0000000c usb_free_pipe
+000deb14 l     F .text	00000009 usb_alloc_pipe
+000deb1d l     F .text	0000001d getword.clone.26
+000deb3a l     F .text	00000382 readtables
+000deebc l     F .text	00000083 pci_find_capability.clone.30
+000def3f l     F .text	0000001c pci_region_align.clone.41
+000def5b l     F .text	00000027 pci_region_sum.clone.42
+000def82 l     F .text	000000fa pci_bios_init_root_regions_mem
+000df07c l     F .text	0000004c pci_region_migrate_64bit_entries.clone.43
+000f0420 l     F .text	0000009c hash_log_extend.clone.49
+000df0c8 l     F .text	00000043 build_usb_path.clone.50
+000df10b l     F .text	00000085 ahci_port_reset.clone.56
+000ed054 l     O .text	00000010 __func__.11260
+000df190 l     F .text	00000031 ahci_port_release
+000f04bc l     F .text	00000081 ehci_waittick.clone.57
+000f6008 l     O .text	0000000e __func__.6391
+000f053d l     F .text	0000028f ehci_send_pipe
+000f5fe8 l     O .text	0000000f __func__.6554
+000f5ff8 l     O .text	0000000d __func__.6522
+000df1c1 l     F .text	00000238 configure_ehci
+000ed370 l     O .text	0000000f __func__.6419
+000ed728 l     O .text	0000000c ehci_HubOp
+000f07cc l     F .text	0000004e ohci_waittick.clone.58
+000f6030 l     O .text	0000000e __func__.6169
+000f081a l     F .text	000001fd ohci_send_pipe
+000f6018 l     O .text	0000000f __func__.6307
+000f6028 l     O .text	00000008 __func__.6287
+000f0a17 l     F .text	0000005d wait_td.clone.59
+000f6040 l     O .text	00000008 __func__.6072
+000f0a74 l     F .text	00000296 uhci_send_pipe
+000f6048 l     O .text	0000000a __func__.6062
+000f0d0a l     F .text	00000160 usb_send_pipe
+000f5f40 l     O .text	0000000f __func__.11935
+000f0e6a l     F .text	00000189 uas_process_op
+000f6078 l     O .text	00000044 CSWTCH.1521
+000f0ff3 l     F .text	00000121 usb_process_op
+000df3f9 l     F .text	0000001f usb_send_default_control
+000df418 l     F .text	00000069 usb_hub_disconnect
+000df481 l     F .text	00000059 get_port_status
+000df4da l     F .text	0000002f usb_hub_detect
+000df509 l     F .text	00000050 set_port_feature
+000df559 l     F .text	000000b9 usb_hub_reset
+000ecf1c l     O .text	0000000e __func__.12001
+000df612 l     F .text	00000281 configure_ohci
+000ed3ac l     O .text	0000000f __func__.6204
+000ed3bc l     O .text	0000000b __func__.6191
+000ed734 l     O .text	0000000c ohci_HubOp
+000f1114 l     F .text	00000113 vring_add_buf.clone.63
+000f5e88 l     O .text	0000000e __func__.14846
+000f1227 l     F .text	00000128 virtio_blk_op
+000df893 l     F .text	00000048 detect_serial.clone.64
+000df8db l     F .text	0000003b detect_parport.clone.65
+000df916 l     F .text	0000001f pci_config_maskw.clone.66
+000df935 l     F .text	00000023 pci_enable_busmaster
+000df958 l     F .text	00000070 pci_enable_iobar
+000ed09c l     O .text	00000011 __func__.11137
+000df9c8 l     F .text	0000008d pci_enable_membar
+000ed088 l     O .text	00000012 __func__.11143
+000dfa55 l     F .text	000002be vp_init_simple
+000f134f l     F .text	0000001d ndelay.clone.67
+000f136c l     F .text	00000011 rtc_mask.clone.68
+000f137d l     F .text	00000034 finish_preempt
+000f13b1 l     F .text	0000003a start_preempt
+000f6490 l     O .text	00000004 PreemptCount
+000dfd13 l     F .text	00000029 call16_int10
+000dfd3c l     F .text	00000173 enable_vga_console
+000f13eb l     F .text	00000083 __callrom
+000dfeaf l     F .text	0000008b ps2_recvbyte.clone.69
+000ed490 l     O .text	0000000d __func__.5269
+000dff3a l     F .text	00000040 ps2_sendbyte.clone.70
+000dff7a l     F .text	00000196 __ps2_command.clone.71
+000e0110 l     F .text	00000150 ps2_keyboard_setup
+000ed460 l     O .text	00000013 __func__.5340
+000e0260 l     F .text	0000002e set_protocol.clone.72
+000f146e l     F .text	0000005b await_ide.clone.73
+000f5fdc l     O .text	0000000a __func__.7202
+000f14c9 l     F .text	0000000e await_not_bsy
+000f14d7 l     F .text	00000011 ndelay_await_not_bsy
+000f14e8 l     F .text	0000001f ata_wait_data
+000f1507 l     F .text	000000bb send_cmd
+000f15c2 l     F .text	000000ac ata_pio_transfer.clone.74
+000e028e l     F .text	0000009f send_ata_identity
+000e032d l     F .text	00000025 ata_extract_model.clone.75
+000e0352 l     F .text	000000ac init_controller.clone.76
+000ed2b8 l     O .text	00000010 __func__.7481
+000ed7ac l     O .text	00000004 ataid.7479
+000e1a09 l     F .text	000003f6 ata_detect
+000e03fe l     F .text	000000c0 found_genericata
+000e04be l     F .text	000000b5 build_pci_path.clone.77
+000e0573 l     F .text	00000098 addFloppy
+000ed6ec l     O .text	00000004 DefaultFloppyPrio
+000e060b l     F .text	00000b0f device_hardware_setup
+000ecf84 l     O .text	00000016 __func__.11703
+000ed358 l     O .text	00000016 __func__.6436
+000ed404 l     O .text	00000016 __func__.6001
+000ed394 l     O .text	00000016 __func__.6218
+000ed27c l     O .text	0000003c pci_ata_tbl
+000ed02c l     O .text	00000016 __func__.11325
+000ed044 l     O .text	00000010 __func__.11267
+000e4bb1 l     F .text	0000003d sdcard_romfile_setup
+000e4bee l     F .text	00000029 sdcard_pci_setup
+000ed26c l     O .text	0000000e __func__.7531
+000e113e l     F .text	00000246 init_virtio_blk
+000e8389 l     F .text	0000019a init_virtio_scsi
+000e8c5b l     F .text	000000eb init_lsi_scsi
+000e8b70 l     F .text	000000eb init_esp_scsi
+000e8942 l     F .text	0000022e init_megasas
+000e8523 l     F .text	00000105 init_pvscsi
+000e8628 l     F .text	00000146 init_mpt_scsi
+000e1878 l     F .text	00000191 ahci_port_detect
+000e111a l     F .text	00000024 bootprio_find_pci_device
+000eb828 l     O .text	00000010 __func__.15015
+000e1384 l     F .text	00000053 bootprio_find_scsi_device
+000e13d7 l     F .text	00000053 bootprio_find_ata_device
+000e142a l     F .text	0000044e ahci_port_setup
+000ed064 l     O .text	00000010 __func__.11293
+000ed074 l     O .text	00000012 __func__.11276
+000ed2e0 l     O .text	0000000a __func__.7228
+000e1dff l     F .text	0000006d getRomPriority
+000e1e6c l     F .text	00000091 bootprio_find_usb
+000f166e l     F .text	000000ca tpm20_hierarchycontrol.clone.79
+000f1738 l     F .text	00000041 tpm_set_failure
+000e1efd l     F .text	000000b6 tpm12_get_capability
+000e1fb3 l     F .text	00000033 tpm12_read_has_owner
+000f1779 l     F .text	00000092 tpm_add_measurement_to_log
+000f180b l     F .text	00000024 tpm_add_action
+000e1fe6 l     F .text	0000012f init_optionrom
+000ed1b4 l     O .text	0000000f __func__.8711
+000ed1ec l     O .text	0000000c __func__.8528
+000e2115 l     F .text	000001db init_pcirom
+000ed7a4 l     O .text	00000004 RunPCIroms
+000ed1a8 l     O .text	00000009 __func__.8753
+000e22f0 l     F .text	0000004c run_file_roms
+000e233c l     F .text	0000020e optionrom_setup
+000ed6f0 l     O .text	00000004 DefaultBEVPrio
+000f182f l     F .text	000000fe boot_disk
+000e254a l     F .text	00000046 tpm12_read_permanent_flags.clone.80
+000e2590 l     F .text	00000041 tpm12_enable_tpm.clone.55
+000e25d1 l     F .text	00000081 tpm12_activate_tpm.clone.81
+000ed0c3 l     O .text	00000001 CommandFlag_TRUE
+000ed0c2 l     O .text	00000001 CommandFlag_FALSE
+000e2652 l     F .text	00000096 tpm12_set_owner_install.clone.83
+000e26e8 l     F .text	00001f12 interactive_bootmenu
+000ed164 l     O .text	00000012 __func__.9318
+000ed794 l     O .text	00000004 BootsplashActive
+000e45fa l     F .text	0000003c sdcard_pio_app.clone.85
+000e4636 l     F .text	0000045f sdcard_card_setup
+000ecf08 l     O .text	00000012 __func__.12165
+000e4a95 l     F .text	0000011c sdcard_controller_setup
+000ecef0 l     O .text	00000018 __func__.12183
+000e4c17 l     F .text	00000044 build_header.clone.87
+000e4c5b l     F .text	00000c41 acpi_setup
+000eb91c l     O .text	0000003c acpi_find_tbl
+000ecad8 l     O .text	0000000b __func__.14172
+000eca9c l     O .text	0000003c fadt_init_tbl
+000ecc48 l     O .text	0000000b __func__.14252
+000ecae4 l     O .text	00000162 ssdp_misc_aml
+000ed500 l     O .text	00000008 pcimem64_start
+000ed508 l     O .text	00000008 pcimem64_end
+000ed5b0 l     O .text	00000078 ssdp_proc_aml
+000ed628 l     O .text	00000057 ssdp_pcihp_aml
+000ecc54 l     O .text	0000000c __func__.14245
+000ecc60 l     O .text	0000000b __func__.14178
+000ecc6c l     O .text	0000000b __func__.14277
+000ecc78 l     O .text	0000000b __func__.14297
+000ecc84 l     O .text	0000000f __func__.14320
+000eca90 l     O .text	0000000b __func__.14332
+000eb958 l     O .text	00001135 AmlCode
+000e589c l     F .text	000027a1 qemu_platform_setup
+000f61e0 l     O .text	00000004 xen_cpuid_base
+000ed74c l     O .text	00000004 xen_hypercall_page
+000f63c4 l     O .text	0000000c acpi_reset_reg
+000f63d0 l     O .text	00000001 acpi_reset_val
+000eccc4 l     O .text	0000003c pci_platform_tbl
+000ecca0 l     O .text	0000000a __func__.13885
+000ed758 l     O .text	00000008 RamSizeOver4G
+000ecd24 l     O .text	00000118 pci_device_tbl
+000ed530 l     O .text	00000080 PIR_TABLE
+000eb90c l     O .text	0000000e __func__.14344
+000ecea0 l     O .text	00000015 __func__.13170
+000eb8cc l     O .text	00000014 __func__.14504
+000eb8f0 l     O .text	00000019 __func__.14402
+000eb844 l     O .text	00000017 __func__.14622
+000eb85c l     O .text	00000018 __func__.14578
+000eb874 l     O .text	0000001b __func__.14589
+000eb890 l     O .text	0000001c __func__.14600
+000ece78 l     O .text	00000014 __func__.13284
+000eb8ac l     O .text	0000001d __func__.14612
+000ece60 l     O .text	00000015 __func__.13297
+000f6218 l     O .text	00000004 romfile_pointer_list
+000ece8c l     O .text	00000014 __func__.13219
+000f2480 l     F .text	00000042 process_op
+000f24c2 l     F .text	00000108 scsi_is_ready
+000e804d l     F .text	0000033c scsi_drive_setup
+000eb800 l     O .text	00000011 __func__.15090
+000eb814 l     O .text	00000014 __func__.15073
+000ed01c l     O .text	0000000f __func__.11475
+000ed710 l     O .text	00000018 MptIOCInitRequest
+000ed20c l     O .text	00000011 __func__.7943
+000e876e l     F .text	000001d4 megasas_scan_target
+000ed220 l     O .text	00000014 __func__.7804
+000ed234 l     O .text	00000010 __func__.7797
+000ed244 l     O .text	00000011 __func__.7664
+000ed258 l     O .text	00000011 __func__.7590
+000ed43c l     O .text	00000010 speed_to_ctlsize
+000ed44c l     O .text	00000012 __func__.5855
+000ed684 l     O .text	0000000c HubOp
+000ed318 l     O .text	00000012 __func__.6768
+000ed308 l     O .text	0000000e __func__.6859
+000f25ca l     F .text	00000327 cdrom_boot
+000f28f1 l     F .text	00000176 do_boot
+000f614c l     O .text	00000004 CheckFloppySig
+000f5fab l     O .text	00000002 Startup_ST_STATE
+000f5fad l     O .text	00000002 Startup_SU_STATE
+000f5faf l     O .text	00000001 TPM2_SelfTest_YES
+000f6484 l     O .text	00000004 S3ResumeVga
+000f61f0 l     O .text	00000004 VgaROM
+000e9671 l     F .text	00001cc2 maininit
+000ed188 l     O .text	0000000e __func__.8896
+000ed0cc l     O .text	00000002 Startup_ST_CLEAR
+000ed0ce l     O .text	00000002 PhysicalPresence_PRESENT
+000ed0d0 l     O .text	00000002 PhysicalPresence_CMD_ENABLE
+000ed0e4 l     O .text	0000000c C.678.24321
+000ed0d4 l     O .text	00000010 C.679.24322
+000ed0d2 l     O .text	00000002 Startup_SU_CLEAR
+000ed0f0 l     O .text	00000013 __func__.10605
+000ed0c4 l     O .text	00000002 PhysicalPresence_NOT_PRESENT_LOCK
+000ed0c8 l     O .text	00000004 evt_separator.10668
+000ed4b8 l     O .text	0000000a __func__.3206
+000ed764 l     O .text	00000001 CDCount
+000ed4a8 l     O .text	0000000f __func__.3459
+000ed4e4 l     O .text	00000014 CSWTCH.1647
+000f5fbc l     O .text	0000000a __func__.9208
+000f5fb0 l     O .text	0000000a __func__.9213
+000f5e98 l     O .text	0000000b __func__.13943
+00000000 l    df *ABS*	00000000 version.c
+000ffea5 g       *ABS*	00000000 entry_08
+000fd2fb g       *ABS*	00000000 transition16big
+000fe3fe g       *ABS*	00000000 entry_13_official
+000d9b2d g     O *ABS*	00000001 TPM_interface_shutdown
+000f6df4 g     O .text	00000004 MaxPCIBus
+000f6de0 g     O .text	00000004 LegacyRamSize
+000f7148 g     O .text	00000004 ViaFBsize
+000ffff5 g     O .text	00000009 BiosDate
+000d9b30 g       *ABS*	00000000 code32init_start
+000fd3d0 g       *ABS*	00000000 irq_trampoline_0x16
+000f34ec g       .text	00000000 _rodata32flat
+000d92b4 g     O *ABS*	00000004 BootSequence
+000f34ce g     F .text	0000001e handle_smp
+000f7154 g     O .text	00000004 keyboard_pipe
+000fe97c g       *ABS*	00000000 entry_hwpic2
+000f8b76 g       *ABS*	00000000 _cfunc16_call16_helper
+000f6d30 g     O .text	00000010 BIOS32HEADER
+000f7144 g     O .text	00000004 VGAHookHandlerType
+000d9b30 g       *ABS*	00000000 varlow_end
+000fe6f2 g       *ABS*	00000000 entry_19_official
+000f6d44 g     O .text	00000002 TimerPort
+000f193d g     F .text	00000b43 process_op_32
+000fd3eb g       *ABS*	00000000 entry_smp
+000fd3ca g       *ABS*	00000000 irq_trampoline_0x13
+000fd3c7 g       *ABS*	00000000 irq_trampoline_0x10
+000d9b00 g     O *ABS*	00000004 TimerLast
+000f6cb0 g     O .text	00000038 rombios32_gdt
+000d9b18 g     O *ABS*	00000014 tpm_state
+000f9778 g       *ABS*	00000000 _cfunc16_check_irqs
+000f2d78 g     F .text	0000003f startBoot
+000d9ae8 g     O *ABS*	00000004 emulated_drive_gf
+000f6ce8 g     O .text	00000006 rombios32_gdt_48
+000f2db7 g     F .text	000000de handle_post
+000fd735 g       *ABS*	00000000 entry_75
+000f6d48 g     O .text	0000000e diskette_param_table2
+000f6ca8 g     O .text	00000006 pmode_IDT_info
+000fd764 g       .text	00000000 _rodata16
+000d9b30 g       *ABS*	00000000 final_readonly_start
+000eb637 g     F .text	0000018a handle_pmm
+000f6d00 g     O .text	00000021 PNPHEADER
+000fd430 g       *ABS*	00000000 entry_pmm
+000d9abc g     O *ABS*	00000004 StackPos
+000fefd2 g       *ABS*	00000000 entry_17
+00100000 g       *ABS*	00000000 code32flat_end
+000d9b08 g     O *ABS*	00000008 LastUSBkey
+000f6e00 g     O .text	000000c0 IDMap
+000f6158 g     O .text	00000028 VERSION
+000ff065 g       *ABS*	00000000 entry_10
+000f7153 g     O .text	00000001 ShiftTSC
+000f6d46 g     O .text	00000002 DebugOutputPort
+000f6dc0 g     O .text	00000010 PMMHEADER
+000d92a0 g     O *ABS*	00000013 CDEmu
+000fefc7 g     O .text	0000000b diskette_param_table
+00000010 g       *ABS*	00000000 _reloc_min_align
+000ffff0 g       *ABS*	00000000 reset_vector
+000f32d8 g     F .text	000001f6 handle_smi
+000fe2c3 g       *ABS*	00000000 entry_02
+000d9b14 g     O *ABS*	00000004 reply_msg
+000fef57 g       *ABS*	00000000 entry_0e
+000d9afc g     O *ABS*	00000001 Century
+000fd492 g       *ABS*	00000000 entry_pnp_real
+000ffa65 g       *ABS*	00000000 entry_hwpic1
+000f6dfc g     O .text	00000004 bounce_buf_fl
+000f6ec0 g     O .text	00000280 e820_list
+000f61f4 g     O .text	00000004 SMPLock
+000fd48e g       *ABS*	00000000 entry_pnp_prot
+000d92b8 g     O *ABS*	00000801 ExtraStack
+000f6ca0 g     O .text	00000006 rmode_IDT_info
+000ff0a4 g     O .text	00000058 VideoParams
+000fd3d3 g       *ABS*	00000000 irq_trampoline_0x18
+000f2eee g     F .text	0000036c tpm_interrupt_handler32
+000e803d g     F .text	00000010 yield_preempt
+000fe2b8 g       *ABS*	00000000 entry_76
+000fff54 g       *ABS*	00000000 entry_05
+000fc377 g       *ABS*	00000000 _cfunc16_wait_irq
+000f2ec1 g     F .text	0000002d handle_19
+000ff859 g       *ABS*	00000000 entry_15_official
+000f6dd0 g     O .text	00000004 HaveSmmCall32
+000f6dec g     O .text	00000004 acpi_pm1a_cnt
+000fe987 g       *ABS*	00000000 entry_09
+000d9ad8 g     O *ABS*	00000010 DefaultDPTE
+000ff841 g       *ABS*	00000000 entry_12
+000fd3d6 g       *ABS*	00000000 entry_smi
+000ff83e g       *ABS*	00000000 irq_trampoline_0x19
+000f6d40 g     O .text	00000004 TimerKHz
+000f6180 g     O .text	0000005a BUILDINFO
+000d92b3 g     O *ABS*	00000001 Ps2ctr
+000f6dd8 g     O .text	00000001 dummy_IDT
+000f6d58 g     O .text	0000005a FloppyInfo
+000f61f8 g     O .text	00000004 SMPStack
+000fd2b0 g       *ABS*	00000000 transition32_nmi_off
+000ffe6e g       *ABS*	00000000 entry_1a_official
+000f7151 g     O .text	00000001 IntelDisplayId
+000fd723 g       *ABS*	00000000 entry_70
+000f6ca0 g       *ABS*	00000000 zonefseg_end
+000fe739 g       *ABS*	00000000 entry_14
+000f6ddc g     O .text	00000004 PlatformRunningOn
+000d92a0 g       *ABS*	00000000 varlow_start
+000f2e95 g     F .text	0000002c handle_18
+000ed7c0 g       *ABS*	00000000 code32init_end
+000f6dd4 g     O .text	00000004 HaveRunPost
+000fffff g     O .text	00000001 BiosChecksum
+000f192d g     F .text	00000010 call32_params_helper
+000f6df0 g     O .text	00000004 CanPreempt
+000ff84d g       *ABS*	00000000 entry_11
+000d9ac0 g     O *ABS*	00000018 Call16Data
+000ffa6e g     O .text	00000400 vgafont8
+000f6de4 g     O .text	00000004 cdemu_drive_gf
+000fff53 g       *ABS*	00000000 entry_iret_official
+000f7150 g     O .text	00000001 IntelDisplayType
+000d9b04 g     O *ABS*	00000004 RTCusers
+000ffffe g     O .text	00000001 BiosModelId
+000f7140 g     O .text	00000004 e820_count
+000ffef3 g     O .text	0000000d InitVectors
+000f6df8 g     O .text	00000001 FloppyCount
+000fec59 g       *ABS*	00000000 entry_40
+000d9aec g     O *ABS*	00000010 CDRom_locks
+000fe6f5 g     O .text	0000000a BIOS_CONFIG_TABLE
+000fe401 g     O .text	00000010 OldFDPT
+000eb333 g     F .text	00000304 dopost
+000f714c g     O .text	00000004 ViaRamSpeed
+000f8fc7 g       *ABS*	00000000 _cfunc16__farcall16
+000fd2e6 g       *ABS*	00000000 transition16
+000f7152 g     O .text	00000001 SmiBootDisplay
+000f325a g     F .text	0000007e xhci_poll_intr
+000fd72c g       *ABS*	00000000 entry_74
+000fe729 g     O .text	00000010 BaudTable
+000f2a67 g     F .text	00000311 handle_resume32
+000f64a0 g       *ABS*	00000000 zonefseg_start
+000f6de8 g     O .text	00000004 PirAddr
+000f79ee g       .text	00000000 _rodata32seg
+000d9b2c g     O *ABS*	00000001 TPM_working
+000ca000 g       *ABS*	00000000 zonelow_base
+000ff046 g       *ABS*	00000000 entry_bios32
+000fe82e g       *ABS*	00000000 entry_16
+000fd751 g       *ABS*	00000000 entry_18
+000d92a0 g       *ABS*	00000000 final_varlow_start
+000f6cf0 g     O .text	0000000c MainThread
+000f7158 g     O .text	00000004 mouse_pipe
+000d92a0 g       *ABS*	00000000 code32flat_start
+000d9b10 g     O *ABS*	00000001 FloppyDOR
+
+

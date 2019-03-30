@@ -1,0 +1,7 @@
+#include "src/string.c"
+ #include "src/output.c"
+ #include "src/pcibios.c"
+ #include "src/apm.c"
+ #include "src/stacks.c"
+ #include "src/hw/pci.c"
+ #include "src/hw/serialio.c"
