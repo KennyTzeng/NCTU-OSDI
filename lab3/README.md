@@ -7,6 +7,29 @@
 + How to write an x86 interrupt service routine(ISR).
 + Keyboard and timer interrupt implementation.
 
+## Files' descriptions
+| File | Description |
+| -------- | -------- | 
+| boot/boot.S     | A simple boot loader. It only changes CPU into protected mode and setup basic GDT.     | 
+| boot/main.c | A simple ELF loader that will load the kernel image to expect memory address.
+| kernel/entry.S|Kernel entry, there we just setup 8\*4096 bytes as kernel stack space and jump into C environment.
+|kernel/main.c|Kernel initial function
+|kernel/picirq.c|Programmable interrupt controller driver, it is used for setup external hardware interrupt.
+|kernel/kbd.c|Keyboard driver, used for read character from keyboard.
+|kernel/screen.c|Simple video driver, it allows you output string to screen.
+|kernel/timer.c|Simple system clock driver
+|kernel/trap.c|Trap handler
+|kernel/trap_entry.S|The trap/interrupt entry, you need to define the interrupt entry point here.
+|kernel/shell.c| A simple command shell, You can use it to debug your kernel.
+|kernel/kern.ld| Kernel linker script, it tells linker how kernel memory placement is.
+|lib/\*.c| In this folder, we prepared some useful library for you (Such as printf, memcpy, strlen…)
+
+## Build and Run
+```
+make all
+qemu-system-i386 -hda kernel.img
+```
+
 ## Questions
 ### GDT setup
 
