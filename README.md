@@ -1,5 +1,9 @@
-Hey guys!
++ Every lab file and note is placed in corresponding subfolder.
 
-This is my writeup for course OSDI(Operating System Design and Implementation) 2019-spring by Prof. Tsao.
++ Keywords of every lab are :
+    + Lab1 : Makefile, GDB, QEMU
+    + Lab2 : real mode, customized BIOS, BIOS interrupt call, kernel booting flow
+    + Lab3 : real/protected mode transition, segmentation, interrupt service routine
+    + Lab4 : paging, virtual address/physical address
 
-The course is very great, highly recommend it.
++ [Course Information](https://hackmd.io/c/B1TbUB5BV/%2FQseQZ_hLSFm3kAFHB_aM-Q) : The page may be dead after the semester.
