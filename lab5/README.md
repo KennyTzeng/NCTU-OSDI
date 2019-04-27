@@ -28,18 +28,18 @@ When accessing a segment, there are actually two checks that must be performed. 
 + RPL <= DPL
 
 ## References
-[lab5_reference.pdf](https://drive.google.com/file/d/1keV0BWLIY_dFqxKOAY84RcUzMAtf2lyZ/view)
+[lab5_reference.pdf](https://drive.google.com/file/d/1keV0BWLIY_dFqxKOAY84RcUzMAtf2lyZ/view)</br>
 [Intel® 64 and IA-32 Architectures Software Developer’s Manual](https://software.intel.com/sites/default/files/managed/a4/60/325384-sdm-vol-3abcd.pdf)
 
 ## Questions
 ### 1. How did you implement “your” super perfect elegant scheduler?
 
-I select next task from `tasks[]` to run by 
-i. Sequentially search a task which state is runnable, start from pid = currunt task's pid + 1.
-ii. Go back to the start when get to the end (like a circle).
+I select next task from `tasks[]` to run by </br>
+i. Sequentially search a task which state is runnable, start from pid = currunt task's pid + 1.</br>
+ii. Go back to the start when get to the end (like a circle).</br>
 iii. Run current task again if there is no other task runnable.
 
-```c=
+```c
 // at kernel/sched.c line 22
 
 void sched_yield(void)
@@ -70,7 +70,7 @@ void sched_yield(void)
 
 By registers. Passing at most 6 arguments in eax(syscall number), edx, ecx, ebx, edi and esi, and put the return value in eax.
 
-```clike=
+```c
 // at lib/syscall.c line 25
 
 asm volatile("int %1\n"
@@ -91,7 +91,7 @@ CPU will automatically push ss, esp, eflags, cs and eip into stack, while only p
 
 After that, we push a integer 0 in place of the error code, and ds, es and all general register to save the context into stack. See kernel/trap_entry.S and struct Trapframe in inc/trap.h in more details.
 
-![](https://i.imgur.com/i60PigA.png)
+![](https://i.imgur.com/i60PigAl.png)
 
 ### 2-3. Could you implement a non-shared kernel stack in the nctuOS？Could you do it with only one tss?
 
@@ -100,18 +100,18 @@ Yes, by additional paging management mechanism to handle this.
 ### 3. Process
 
 ### 3-1. Based on NCTU-OS, which of the following items are shared between our forked tasks?
-i. user stack
-ii. user data
-iii. user code
-iv. kernel stack
-v. kernel data
-vi. kernel code
+i. user stack</br>
+ii. user data</br>
+iii. user code</br>
+iv. kernel stack</br>
+v. kernel data</br>
+vi. kernel code</br>
 
-Only user stack is not shared, others are all shared.
+Only user stack is not shared, others are all shared.</br>
 See task_create(), sys_fork() in kernel/task.c and setupkvm() in kernel/mem.c in more details.
 
 + user stack: allocate individual space
-```clike=
+```c
 // at kernel/task.c line 119
 /* Setup User Stack */
 int va;
@@ -127,7 +127,7 @@ for (va = USTACKTOP; va > USTACKTOP - USR_STACK_SIZE; va -= PGSIZE) {
 ```
 
 + user data and user code
-```clike=
+```c
 // at kernel/task.c line 239
 /* Step 4: All user program use the same code for now */
 setupvm(tasks[pid].pgdir, (uint32_t)UTEXT_start, UTEXT_SZ);
@@ -137,7 +137,7 @@ setupvm(tasks[pid].pgdir, (uint32_t)URODATA_start, URODATA_SZ);
 ```
 
 + kernel stack, kernel data and kernel code
-```clike=
+```c
 // at kernel/mem.c line 593
 pde_t * setupkvm()
 {
@@ -160,7 +160,7 @@ Like answer of 2-2, save the context by pushing such contents of registers into 
 
 Restore the context by calling env_pop_tf() in kernel/trap.c, what it actually does is popping out the context we pushed before.
 
-```clike=
+```c
 // at kernel/trap.c line 121
 void env_pop_tf(struct Trapframe *tf)
 {
