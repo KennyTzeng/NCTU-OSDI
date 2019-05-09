@@ -6,5 +6,6 @@
     + Lab3 : real/protected mode transition, segmentation, interrupt service routine
     + Lab4 : paging, virtual address/physical address
 	+ Lab5 : system call, context switch, task scheduler
+	+ Lab6 : SMP, spinlock
 
 + [Course Information](https://hackmd.io/c/B1TbUB5BV/%2FQseQZ_hLSFm3kAFHB_aM-Q) : The page may be dead after the semester.
